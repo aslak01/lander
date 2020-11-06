@@ -10,6 +10,7 @@ const contents = JSON.stringify(
       html: post.html,
       yr: post.yr,
       url: post.link,
+      github: post.github,
     };
   })
 );

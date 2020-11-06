@@ -7,8 +7,9 @@
 </script>
 
 <script>
-	export let posts;
 	import { onMount } from 'svelte';
+	import GitHubIcon from '../components/GitHub.svelte'
+	export let posts;
 	let Video;
 
 	onMount(async () => {
@@ -21,12 +22,13 @@
 	<title>élektrisité</title>
 </svelte:head>
 
-<article>
+<article class="intro">
 	<section>
-<h1>Hei</h1>
-<p>Jeg heter Aslak Bakkeland og er spesielt interessert i interaksjonsdesign og datavisualisering.</p>
-<p>Jeg begynte å skrive HTML og CSS tidlig i Windows XP-æraen, for så å fikle med PHP like før Vista kom. Jeg tok en pause for å studere sosialvitenskap. Mot slutten av studiene våknet interessen for digital utvikling igjen, da vi gjennomførte sosialviternes alibi-kurs i statistikk. Det var et særdeles praktisk orientert kurs i R, og noe av det jeg likte best med hele studietiden.</p>
-<p>Nedenfor finnes noen av mine nylige prosjekter.</p>
+		<h1>Hei</h1>
+		<p>Jeg heter Aslak Bakkeland og er spesielt interessert i interaksjonsdesign og datavisualisering.</p>
+		<p>Jeg begynte å fikle med HTML og CSS tidlig i Windows XP-æraen, og noe senere også PHP. Jeg tok en pause fra denslags noen år og studerte sosialvitenskap. Mot slutten av studiene våknet interessen for digital utvikling igjen, da vi gjennomførte sosialviternes alibikurs i statistikk. Det var et praktisk orientert kurs i R, og et fagene av jeg likte best gjennom hele studietiden. Siden den gang har jeg oppdatert meg på JavaScript-fronten, og gjort meg kjent med Vue- og Svelte-rammeverkene.</p>
+		<p>Nedenfor finnes noen av mine nylige prosjekter.</p>
+		<p>Jeg kan nås på aslakrb@gmail.com.</p>
 	</section>
 </article>
 
@@ -36,13 +38,18 @@
 	<h2>
 		{#if post.url}
 			<a href="{post.url}">
-				{post.title}
+				{@html post.title}
 			</a>
 		{:else}
 			{post.title}
 		{/if}
 	</h2>
-	<h3>{post.yr}</h3>
+	<h3>
+		{post.yr}
+		{#if post.github}
+			<a href="{post.github}"><GitHubIcon/></a>
+		{/if}
+	</h3>
 	{@html post.html}
 	{#if post.png}
 		<svelte:component this={Video} png={post.png} mp4={post.mp4} />
@@ -55,10 +62,10 @@
 <style>
 	h1 {
 	font-weight: bold;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	}
-	article {
-		margin: 10vh 0;
+	.intro {
+		margin-top: 5rem;
 	}
 	p {
 		margin: 1em auto;
@@ -82,12 +89,16 @@ h2 {
 }
 section {
 	position: relative;
+	width: 90%;
 }
 article {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	
+}
+article:not(:first-of-type) {
 	margin: 10vh 0;
 }
 </style>

@@ -7,7 +7,7 @@
 <title>kontakt</title>
 </svelte:head>
 
-<p>Jeg kan nås på aslakrb@gmail.com hvis det er noe.</p>
+<p>Jeg kan nås på aslakrb@gmail.com.</p>
 
 <style>
 	p{
