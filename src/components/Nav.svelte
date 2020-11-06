@@ -1,12 +1,12 @@
 <script>
+	import Lyn from './Lyn.svelte';
 	export let segment;
 </script>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
+		/* border-bottom: 1px solid rgba(255,62,0,0.1); */
+		padding: 0 1rem;
 	}
 
 	ul {
@@ -31,7 +31,11 @@
 		display: inline-block;
 	}
 
-	[aria-current]::after {
+	.selected {
+		color: hsla(39, 100%, 50%, 1);
+		font-weight: bold;
+	}
+	/* [aria-current]::after {
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
@@ -39,22 +43,35 @@
 		background-color: rgb(255,62,0);
 		display: block;
 		bottom: -1px;
-	}
+	} */
 
 	a {
 		text-decoration: none;
 		padding: 1em 0.5em;
 		display: block;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	a:hover {
+		color: #1679B9;
 	}
 </style>
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+		<li>
+			<a aria-current="{segment === undefined ? 'page' : undefined}" class:selected="{ segment === undefined }" href=".">
+			<Lyn/>
+			</a>
+		</li>
+		<li>
+			<a aria-current="{segment === 'kontakt' ? 'page' : undefined}" class:selected="{ segment === 'kontakt' }" href="kontakt">kontakt</a>
+		</li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
+		<li>
+			<a rel=prefetch aria-current="{segment === 'prosjekter' ? 'page' : undefined}" class:selected="{ segment === 'prosjekter' }" href="prosjekter">prosjekter</a>
+		</li>
 	</ul>
 </nav>
