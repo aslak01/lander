@@ -15,7 +15,7 @@ const posts = [
     mp4: "korov.mp4",
     png: "korov.png",
     link: "https://korona.elektri.site",
-    github: "https://github.com/aslak01/koronavirus-layercake",
+    github: "https://github.com/aslak01/svelte-layercake-koronas",
     html: `
 			<p>Visualisering av forskjellige tall som har å gjøre med koronavirusepidemien i Norge. Skrevet i <a href="http://svelte.dev">Svelte</a> med visualiseringsbilioteket <a href="http://layercake.graphics">Layercake</a> (relativt tett integrert med <a href="https://d3js.org">D3.js</a>, men med muligheten for serverside-rendering av grafene, noe jeg ikke gjør bruk av her siden dataen er fersk).</p>
 		`,
