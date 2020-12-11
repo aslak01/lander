@@ -34,18 +34,6 @@ const posts = [
   },
 
   {
-    title: "Forsknings&shy;prosjekt&shy;nettside",
-    yr: "2016",
-    slug: "forskningsprosjektnettside",
-    mp4: "rurdev.mp4",
-    png: "rurdev.png",
-    link: "http://ruraldevelopment.user.jacobs-university.de",
-    html: `
-			<p>Minimalistisk HTML/CSS-nettside med et minimum Javascript.</p>
-		`,
-  },
-
-  {
     title: "Denne siden",
     yr: "2020",
     slug: "denne-siden",

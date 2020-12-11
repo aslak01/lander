@@ -25,10 +25,7 @@
 <article class="intro">
 	<section>
 		<h1>Hei</h1>
-		<p>Jeg heter Aslak Bakkeland og er spesielt interessert i interaksjonsdesign og datavisualisering.</p>
-		<p>Jeg begynte å fikle med HTML og CSS tidlig i Windows XP-æraen, og noe senere også PHP. Jeg tok en pause fra denslags noen år og studerte sosialvitenskap. Mot slutten av studiene våknet interessen for digital utvikling igjen, da vi gjennomførte sosialviternes alibikurs i statistikk. Det var et praktisk orientert kurs i R, og et fagene av jeg likte best gjennom hele studietiden. Siden den gang har jeg oppdatert meg på JavaScript-fronten, og gjort meg kjent med Vue- og Svelte-rammeverkene.</p>
-		<p>Nedenfor finnes noen av mine nylige prosjekter.</p>
-		<p>Jeg kan nås på aslakrb@gmail.com.</p>
+		<p>Jeg heter Aslak og er interessert i interaksjonsdesign og datavisualisering.</p>
 	</section>
 </article>
 
